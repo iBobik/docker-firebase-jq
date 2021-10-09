@@ -20,3 +20,6 @@ jobs:
 
     - name: Push the Docker image
       run: docker push --tag bobik/firebase-jq:latest
+      env:
+        USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
